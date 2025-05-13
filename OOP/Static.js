@@ -1,10 +1,10 @@
-let id = 1;
 class User {
+    static id = 1;
   constructor(name, age, income) {
     this.name = name;
     this.age = age;
     this.income = income;
-    this.id = id++;
+    this.id = User.id++;
   }
 
   static compareByAge(user1, user2) {
@@ -22,6 +22,6 @@ const user3 = new User("Jane Doe", 25, 24555);
 
 const users = [user1, user2, user3];
 
-users.sort(User.compareByIncome);
+// users.sort(User.compareByIncome);
 
 console.log(users);
